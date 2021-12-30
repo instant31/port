@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+<title>포폴사이트</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function() {//실행틀 시작
+  var menu = $(".gnb > li");
+	var content = $("#content > div");
+	
+	menu.click(function(){
+		/*preventDefault 는 a 태그 처럼 클릭 이벤트 외에 
+별도의 브라우저 행동을 막기 위해 사용됩니다.*/
+		event.preventDefault();
+		
+		//사용자가 클릭한 li
+		var tg = $(this);
+		//순서값을 찾는 함수 index()
+		var idx = tg.index();
+		//선택한 li와 순서가 같은 content 를 찾음 eq()
+		var section = content.eq(idx);
+		//선택된 영역의 top 의 좌표값을 저장
+		//.offset()은 선택한 요소의 좌표를 가져오거나 특정 좌표로 이동하게 합니다.
+		var tt = section.offset().top;
+
+		//스크롤이 tt의 값에 맞게 움직이게
+		$("html,body").stop().animate({scrollTop:tt});
+		});//menu.click() 끝
+		
+		// 윈도우에서 scroll() 스크롤이 작동될 때 일어날 일.
+		$(window).scroll(function(){
+		//.scrollTop()은 선택한 요소의 스크롤바 수직 위치를 반환하거나 스크롤바 수직 위치를 정합니다.
+		var location = $(window).scrollTop();
+		
+		content.each(function() {
+			//반복문(each)
+      var tg = $(this);
+			var idx = tg.index();
+			
+			if(tg.offset().top <= location){  //active 위치가 안맞으면 location + 위치값 을 추가하면 됨
+				menu.removeClass("active");
+				menu.eq(idx).addClass("active");
+				}
+
+    });//each() 끝
+		
+			
+			});//scroll() 끝
+});//실행틀 끝
+</script>
+</head>
+
+<body>
+<div id="wrap">
+  <header>
+  	<div id="headerIn">
+    	<h1><a href="#">로고</a></h1>
+      <ul class="gnb">
+      	<li class="active"><a href="#cont1">HOME</a></li>
+        <li><a href="#cont2">WEB PROJECT</a></li>
+        <li><a href="#cont3">GRAPHIC WORKS</a></li>
+        <li><a href="#cont4">CONTACT</a></li>
+      </ul>
+    </div><!--#headerIn-->
+  </header>
+  <div id="content">
+    	<div id="cont1">
+    	<div class="inner">
+      </div><!--.inner-->
+    </div><!--#cont1-->
+    <div id="cont2">
+    	<div class="inner">
+			<ul class="web">
+				<li>first</li>
+				<li>second</li>
+			</ul>
+      </div><!--.inner-->
+    </div><!--#cont2-->
+    <div id="cont3">
+    	<div class="inner">
+			<ul class="web">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+			</ul>
+      </div><!--.inner-->
+    </div><!--#cont3-->
+    <div id="cont4">
+    	<div class="inner">
+      	<p><img src="img/m13.jpg" alt="" title="이미지1"></p>
+      </div><!--.inner-->
+    </div><!--#cont4-->
+  </div><!--#content-->
+</div><!--#wrap-->
+</body>
+</html>
