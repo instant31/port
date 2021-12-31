@@ -9,29 +9,37 @@ h3 {font-weight:300;}
 ul li {list-style:none;}
 a{text-decoration:none; color:#000;}
 
-header{width:20%; height:100%;position:fixed;z-index:100;}
-#headerIn{width:1000px; margin:0 auto;text-align:left;}
+header{width:200px; height:100%;position:fixed;z-index:100;background-color:red;}
 #headerIn h1{font-size:24px; padding-top:5px;margin-bottom:250px;}
 .gnb{}
-.gnb li{width:200px; text-align:left;margin-bottom:60px;font-size:15px;transform:translateX(100px)}
+.gnb li{text-align:left;font-size:15px;padding:10px 0}
 .gnb li:hover a{color:#bb0000;}
 .gnb li.active a{color:#bb0000;}
 
-#content > div{width:100%; height:100%; position:absolute; left:0; overflow:hidden;}
-#cont1{background-image:url("../images/main.png"); top:0;}
-#cont2{background:#FC0; top:100%;}
-#cont3{background:#396; top:200%;}
-#cont4{background:#C63; top:300%;}
-
-#content .inner{width:1000px; margin:0 auto; overflow:hidden;}
-#content .inner img{width:100%;}
-#cont2 .web li {background-color:#fff;height:500px;width:500px;margin-left:50px;vertical-align:middle;}
-#cont2 .web {display:flex;position:absolute;top:50%;transform:translateY(-50%)}
-
-#cont3 .web {display:flex;flex-wrap:wrap;justify-content:start;position:absolute;top:50%;transform:translateY(-50%)}
-#cont3 .web li {background-color:#fff;height:200px;width:300px;margin-right:30px;margin-bottom:50px;}
 
 
+
+#cont1 img{width:100%;height:auto;}
+
+#cont2 {background-color:blue;margin-left:200px;padding:80px 0}
+#cont2 .web li {background-color:#fff;height:500px;width:500px;margin-left:25px;margin-right:25px;}
+#cont2 .web {display:flex;justify-content:center;padding:50px 0;/*position:absolute;top:50%;transform:translateY(-50%)*/}
+
+#cont3 {background-color:darkgoldenrod;margin-left:200px;padding:50px 0;}
+#cont3 .graphic {display:flex;flex-wrap:wrap;justify-content:center;/*position:absolute;top:50%;transform:translateY(-50%)*/}
+#cont3 .graphic li {background-color:#fff;height:300px;width:500px;margin-right:30px;margin-bottom:20px;overflow:hidden;}
+#cont3 .graphic li img {display:block;margin:0 auto;}
+
+
+#cont4 {margin-left:200px;padding:50px 0;}
+#cont4 .about {width:500px;height:500px;background-color:darkorchid;}
+
+
+.mordal {position:absolute;width:80%;height:80%;background-color:rgba(0,0,0,0.7);left:250px;display:none;}
+.mordal_cont {display:flex;flex-wrap:wrap;width:1000px;margin:0 auto;padding:100px 0}
+.mordal .img_box {width:1000px;height:300px;}
+.mordal .img_box img {width:100%;}
+.title_box {text-align:center;width:100%;color:#fff;}
 
 
 
