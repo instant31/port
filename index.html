@@ -53,16 +53,39 @@ $(document).ready(function() {//실행틀 시작
 		
 			
 			});//scroll() 끝
-  $('.li_1').click(function(){
-		$('.mordal').fadeIn();
-		$('button').click(function(){
-			$('.mordal').fadeOut();
+			$('.graphic li').each(function(){
+               $(this).click(function(){
+                   var img_name = $(this).find('img');
+                   var img_alt = $(img_name).attr('alt');
+                   var img_big = $(img_name).attr('big_data');
 
+                   $('#modal').fadeIn();
+                   $('#modal .img1').attr('src',img_big);
+                   $('#modal .txt').text(img_alt);
+               })
+           })
 
-		});
+         $('#btn-close').click(
+             function(){ $('#modal').fadeOut();
+                           img_big = ""
+        });
 
+		$('.web li').each(function(){
+               $(this).click(function(){
+                   var img_name = $(this).find('img');
+                   var img_alt = $(img_name).attr('alt');
+                   var img_big = $(img_name).attr('big_data');
 
-	});
+                   $('#modal').fadeIn();
+                   $('#modal .img1').attr('src',img_big);
+                   $('#modal .txt').text(img_alt);
+               })
+           })
+
+         $('#btn-close').click(
+             function(){ $('#modal').fadeOut();
+                           img_big = ""
+        });
 	
 });//실행틀 끝
 </script>
@@ -88,7 +111,7 @@ $(document).ready(function() {//실행틀 시작
 
     <div id="cont2">
 			<ul class="web">
-				<li class="pj_1"><img src="images/ch_webpj.jpg"><div class="pj_1_title">한국만화박물관<br>WEB DESIGN</div></li>
+				<li class="pj_1"><img src="images/ch_webpj.jpg" big_data ="images/pj1bx.jpg"><div class="pj_1_title">한국만화박물관<br>WEB DESIGN</div></li>
 				<li class="pj_2"><img src="images/webpj2.jpg"><div class="pj_2_title">바다문구<br>CAFE 24</div></li>
 			</ul>
     </div><!--#cont2-->
@@ -109,14 +132,22 @@ $(document).ready(function() {//실행틀 시작
 					
 				</ul>
 			<ul class="graphic">
-				<li class="gp_1"><img src="images/banner_1.jpg"><div class="gp_1_title">윈저앤뉴튼 물감<br>BANNER</div></li>
-				<li class="gp_2"><img src="images/poster_1.jpg"><div class="gp_2_title">몬스터 음료<br>POSTER</div></li>
-				<li class="gp_3"><img src="images/banner_3.jpg"><div class="gp_3_title">신년 다이어리<br>BANNER</div></li>
-				<li class="gp_4"><img src="images/detail.jpg"><div class="gp_4_title">글루 사각 스틱풀<br>DETAIL PAGE</div></li>
-				<li class="gp_5"><img src="images/banner_4.jpg"><div class="gp_5_title">어반 스케치 핸드북<br>BANNER</div></li>
-				<li class="gp_6"><img src="images/banner_2.jpg"><div class="gp_6_title">크리스마스 이벤트 <br>BANNER</div></li>
-				<li class="gp_7"><img src="images/change_banner_6.jpg"><div class="gp_7_title">헤어샵<br>BANNER</div></li>
-				<li class="gp_8"><img src="images/banner_5.jpg"><div class="gp_8_title">립스틱 무료배송 <br>BANNER</div></li>
+				<li class="gp_1"><img src="images/banner_1.jpg" big_data ="images/gp_1.jpg"><div class="gp_1_title"><p>윈저앤뉴튼 물감<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_2"><img src="images/poster_1.jpg" big_data ="images/gp_2.jpg"><div class="gp_2_title"><p>몬스터 음료<br>
+					<span class="text_small">POSTER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_3"><img src="images/banner_3.jpg" big_data ="images/gp_3.jpg"><div class="gp_3_title"><p>신년 다이어리<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_4"><img src="images/detail.jpg" big_data ="images/gp_4.jpg"><div class="gp_4_title"><p>글루 사각 스틱풀<br>
+					<span class="text_small">DETAIL PAGE/PHOTOSHOP</span></p></div></li>
+				<li class="gp_5"><img src="images/banner_4.jpg" big_data ="images/gp_5.jpg"><div class="gp_5_title"><p>어반 스케치 핸드북<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_6"><img src="images/banner_2.jpg" big_data ="images/gp_6.jpg"><div class="gp_6_title"><p>크리스마스 이벤트<br>
+					<span class="text_small">BANNER/ILLUSTRATOR</span></p></div></li>
+				<li class="gp_7"><img src="images/change_banner_6.jpg" big_data ="images/gp_7.jpg"><div class="gp_7_title"><p>헤어샵<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_8"><img src="images/banner_5.jpg" big_data ="images/gp_8.jpg"><div class="gp_8_title"><p>립스틱 무료배송<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
 			</ul>
 			 
     </div><!--#cont3-->
@@ -130,6 +161,18 @@ $(document).ready(function() {//실행틀 시작
 
     </div><!--#cont4-->
   </div><!--#content-->
+
+  <div id="modal">
+	<div class="body">
+		<div class="img">
+			<img src="test.jpg" class="img1">
+			<p class="txt"></p>
+		</div>
+		<div class="button"><button type="button" id="btn-close">닫기</button></div>
+	</div>
+</div>
+
 </div><!--#wrap-->
+
 </body>
 </html>
