@@ -10,62 +10,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
 <script src="js/jquery-3.1.1.min.js"></script>
-<script>
-$(document).ready(function() {//실행틀 시작
-  var menu = $(".gnb > li");
-	var content = $("#content > div");
-	
-	menu.click(function(){
-		/*preventDefault 는 a 태그 처럼 클릭 이벤트 외에 
-별도의 브라우저 행동을 막기 위해 사용됩니다.*/
-		event.preventDefault();
-		
-		//사용자가 클릭한 li
-		var tg = $(this);
-		//순서값을 찾는 함수 index()
-		var idx = tg.index();
-		//선택한 li와 순서가 같은 content 를 찾음 eq()
-		var section = content.eq(idx);
-		//선택된 영역의 top 의 좌표값을 저장
-		//.offset()은 선택한 요소의 좌표를 가져오거나 특정 좌표로 이동하게 합니다.
-		var tt = section.offset().top;
-
-		//스크롤이 tt의 값에 맞게 움직이게
-		$("html,body").stop().animate({scrollTop:tt});
-		});//menu.click() 끝
-		
-		// 윈도우에서 scroll() 스크롤이 작동될 때 일어날 일.
-		$(window).scroll(function(){
-		//.scrollTop()은 선택한 요소의 스크롤바 수직 위치를 반환하거나 스크롤바 수직 위치를 정합니다.
-		var location = $(window).scrollTop();
-		
-		content.each(function() {
-			//반복문(each)
-      var tg = $(this);
-			var idx = tg.index();
-			
-			if(tg.offset().top <= location){  //active 위치가 안맞으면 location + 위치값 을 추가하면 됨
-				menu.removeClass("active");
-				menu.eq(idx).addClass("active");
-				}
-
-    });//each() 끝
-		
-			
-			});//scroll() 끝
-  $('.li_1').click(function(){
-		$('.mordal').fadeIn();
-		$('button').click(function(){
-			$('.mordal').fadeOut();
-
-
-		});
-
-
-	});
-	
-});//실행틀 끝
-</script>
+<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -83,12 +28,14 @@ $(document).ready(function() {//실행틀 시작
   </header>
   <div id="content">
     	<div id="cont1">
-				<img src="images/main.png">
-    </div><!--#cont1-->
+				<img src="images/main2.png" class="main">
+				<img src="images/redcar.png" class="redcar">
+				<img src="images/waving_hand.png" class="hand">
+        </div><!--#cont1-->
 
     <div id="cont2">
 			<ul class="web">
-				<li class="pj_1"><img src="images/ch_webpj.jpg"><div class="pj_1_title">한국만화박물관<br>WEB DESIGN</div></li>
+				<li class="pj_1"><img src="images/ch_webpj.jpg" big_data ="images/pj1bx.jpg"><div class="pj_1_title">한국만화박물관<br>WEB DESIGN</div></li>
 				<li class="pj_2"><img src="images/webpj2.jpg"><div class="pj_2_title">바다문구<br>CAFE 24</div></li>
 			</ul>
     </div><!--#cont2-->
@@ -109,14 +56,24 @@ $(document).ready(function() {//실행틀 시작
 					
 				</ul>
 			<ul class="graphic">
-				<li class="gp_1"><img src="images/banner_1.jpg"><div class="gp_1_title">윈저앤뉴튼 물감<br>BANNER</div></li>
-				<li class="gp_2"><img src="images/poster_1.jpg"><div class="gp_2_title">몬스터 음료<br>POSTER</div></li>
-				<li class="gp_3"><img src="images/banner_3.jpg"><div class="gp_3_title">신년 다이어리<br>BANNER</div></li>
-				<li class="gp_4"><img src="images/detail.jpg"><div class="gp_4_title">글루 사각 스틱풀<br>DETAIL PAGE</div></li>
-				<li class="gp_5"><img src="images/banner_4.jpg"><div class="gp_5_title">어반 스케치 핸드북<br>BANNER</div></li>
-				<li class="gp_6"><img src="images/banner_2.jpg"><div class="gp_6_title">크리스마스 이벤트 <br>BANNER</div></li>
-				<li class="gp_7"><img src="images/change_banner_6.jpg"><div class="gp_7_title">헤어샵<br>BANNER</div></li>
-				<li class="gp_8"><img src="images/banner_5.jpg"><div class="gp_8_title">립스틱 무료배송 <br>BANNER</div></li>
+				<li class="gp_1"><img src="images/banner_1.jpg" big_data ="images/gp_1.jpg"><div class="gp_1_title"><p>윈저앤뉴튼 물감<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_2"><img src="images/poster_1.jpg" big_data ="images/gp_2.jpg"><div class="gp_2_title"><p>몬스터 음료<br>
+					<span class="text_small">POSTER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_3"><img src="images/banner_3.jpg" big_data ="images/gp_3.jpg"><div class="gp_3_title"><p>신년 다이어리<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_4"><img src="images/detail.jpg" big_data ="images/gp_4.jpg" ><div class="gp_4_title"><p>글루 사각 스틱풀<br>
+					<span class="text_small">DETAIL PAGE/PHOTOSHOP</span></p></div></li>
+				<li class="gp_5"><img src="images/banner_4.jpg" big_data ="images/gp_5.jpg"><div class="gp_5_title"><p>어반 스케치 핸드북<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_6"><img src="images/banner_2.jpg" big_data ="images/gp_6.jpg"><div class="gp_6_title"><p>크리스마스 이벤트<br>
+					<span class="text_small">BANNER/ILLUSTRATOR</span></p></div></li>
+				<li class="gp_7"><img src="images/change_banner_6.jpg" big_data ="images/gp_7.jpg"><div class="gp_7_title"><p>헤어샵<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_8"><img src="images/banner_5.jpg" big_data ="images/gp_8.jpg"><div class="gp_8_title"><p>립스틱 무료배송<br>
+					<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
+				<li class="gp_9"><img src="images/banner_7.png" big_data ="images/gp_9.png"><div class="gp_9_title"><p>치아보험<br>
+				<span class="text_small">BANNER/PHOTOSHOP</span></p></div></li>
 			</ul>
 			 
     </div><!--#cont3-->
@@ -130,6 +87,19 @@ $(document).ready(function() {//실행틀 시작
 
     </div><!--#cont4-->
   </div><!--#content-->
+
+  <div id="modal">
+	<div class="button"><button type="button" id="btn-close"></button></div>
+	<div class="body">
+		<div class="img">
+			<img src="test.jpg" class="img1">
+			<p class="txt"></p>
+		</div>
+		
+	</div>
+</div>
+
 </div><!--#wrap-->
+
 </body>
 </html>
