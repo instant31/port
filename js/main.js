@@ -1,3 +1,4 @@
+
 $(document).ready(function() {//실행틀 시작
     var menu = $(".gnb > li");
       var content = $("#content > div");
@@ -23,8 +24,8 @@ $(document).ready(function() {//실행틀 시작
           
           // 윈도우에서 scroll() 스크롤이 작동될 때 일어날 일.
           $(window).scroll(function(){
-          //.scrollTop()은 선택한 요소의 스크롤바 수직 위치를 반환하거나 스크롤바 수직 위치를 정합니다.
-          var location = $(window).scrollTop();
+          //.scrollTop()은 선택한 요소의 스크롤바 수직 위치를 반환하거나 스크롤바 수직 위치를 정합니다. 20220105선생님도움-scrollTop()뒤에 + 숫자값 넣어주기,그냥 숫자만!!pixel단위 쓰고 싶으면 ''붙여서 넣어야함!
+          var location = $(window).scrollTop() + 60;
           
           content.each(function() {
               //반복문(each)
@@ -57,9 +58,9 @@ $(document).ready(function() {//실행틀 시작
                              img_big = ""
           });
   
-          $('.web li').each(function(){
+          $('.enlarge_icon').each(function(){
                  $(this).click(function(){
-                     var img_name = $(this).find('img');
+                     var img_name = $('.web').find('.large_img');
                      var img_alt = $(img_name).attr('alt');
                      var img_big = $(img_name).attr('big_data');
   
@@ -73,5 +74,26 @@ $(document).ready(function() {//실행틀 시작
                function(){ $('#modal').fadeOut();
                              img_big = ""
           });
-      
+
+          $('.blue_li').click(function(){
+            $(this).addClass('.blue_effect')
+
+
+
+          });
+          
+          $(window).scroll(function(){
+            var cont2 = $('#cont2').offset().top - 10;
+            var cont3 = $('#cont3').offset().top - 10;
+            //alert(cont2)
+
+              if ($(document).scrollTop() >= cont2 && $(document).scrollTop() <= cont3) {
+                  $('header').css({background:'rgb(214,214,214)'})
+               } else if ($(document).scrollTop() >= cont3)  {
+                $('header').css({background:'rgb(214,214,214)'})
+             }
+                else {
+                 $('header').css({background:'transparent'})
+               }
+            }) //scroll
   });//실행틀 끝

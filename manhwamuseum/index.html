@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+<title>한국만화박물관리뉴얼_연습</title>
+  <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+   <![endif]-->
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./css/slick.css">
+
+
+<script src="./js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-migrate-3.0.0.js"></script> 
+<script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+  $(function(){
+    $(".slide").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true,
+        autoplay: false,
+        dots: true,
+        speed: 500,
+      });
+      
+     var status = 1;
+    $('.more_sites').click(function(){
+      if (status == 1) {
+      $('.rel_lists').show();
+      status = 2
+     } else {
+        $('.rel_lists').hide();
+        status = 1;
+      }
+    })
+    
+
+ }) //ready.on
+
+</script>
+
+</head>
+
+<body>
+<div id="wrap">
+  <header id="header">
+    <div class="inner">
+      <a href="http://manmu.dothome.co.kr"><img src="images/logo_1.png" alt="한국만화박물관"></a>
+      <section class="login">
+        <ul>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">예약하기</a></li>
+        </ul>
+      </section>
+      <section id="nav">
+        <ul class="depth_1">
+          <li><a href="#">박물관소개</a>
+            <ul class="depth_2">
+              <li><a href="#">설립취지</a></li>
+              <li><a href="#">CI소개</a></li>
+              <li><a href="#">조직</a></li>
+              <li><a href="#">소식</a></li>
+            </ul>
+          </li>
+          <li><a href="#">이용안내</a>
+            <ul class="depth_2">
+              <li><a href="#">관람안내</a></li>
+              <li><a href="#">오시는길</a></li>
+              <li><a href="#">단체관람 예약</a></li>
+              <li><a href="#">시설안내</a></li>
+            </ul>
+          </li>
+          <li><a href="#">전시</a>
+            <ul class="depth_2">
+              <li><a href="#">상설전시</a></li>
+              <li><a href="#">기획전시</a></li>
+              <li><a href="#">온라인전시</a></li>
+            </ul>
+          </li>
+          <li><a href="#">상영</a>
+            <ul class="depth_2">
+              <li><a href="#">이용안내</a></li>
+              <li><a href="#">상영작안내</a></li>
+            </ul>
+          </li>
+          <li><a href="#">교육</a>
+            <ul class="depth_2">
+              <li><a href="#">교육안내</a></li>
+              <li><a href="#">상설체험교육</a></li>
+              <li><a href="#">만화상상아카데미</a></li>
+              <li><a href="#">갤러리</a></li>
+            </ul></li>
+        </ul>
+      </section>
+      
+    </div>
+  </header>
+ 
+  <section id="section1" class="slide inner" data-sizes="50vw">
+   <div class="slide_set">
+     <div class="img_box"><img src="images/mainslideimg.png" alt="메인슬라이드배너"></div> 
+     <div class="red_box">
+       <p class="vertical">기획전시</p>
+       <p class="title">탐묘인간:<br>
+                    고양이와 함께<br>
+                        산다는 것<br>
+       <p class="date">2021.09.01 ~ 2021.12.31</p>
+     </div> 
+    </div> 
+    <div></div>
+    <div></div>
+  </section>
+  <section id="section2">
+    <div class="inner">
+      <div class="tabSet">
+        <ul class="tabs">
+          <li><a href="#"><</a></li>
+          <li>2021.11</li>
+          <li class="day"><a href="">11.목</a></li>
+          <li class="day"><a href="#">12.금</a></li>
+          <li class="day"><a href="#">13.토</a></li>
+          <li class="day"><a href="#">14.일</a></li>
+          <li class="day"><a href="#">15.월</a></li>
+          <li class="day"><a href="#">16.화</a></li>
+          <li class="day"><a href="#">17.수</a></li>
+          <li class="day"><a href="#">></a></li>
+        </ul>
+        <div class="panels">
+          <div class="panel" id=panel1-1>
+            <ul class="ex_info">
+              <li>
+                <p class="category">기획전시</p>
+                <p class="ex_name">- 만화, #시대를 담다<br>(1950~1999:삶의<br>풍경과 이야기</p>
+              </li>
+              <li>
+                <p class="category_2">기획전시</p>
+                <p class="ex_name">- 탐묘인간: 고양이와<br>함께 산다는 것</p>
+              </li>
+              <li>
+                <p class="category_3">교육</p>
+                <p class="ex_name">-나만의 만화 일상툰<br> 만들기</p>
+              </li>
+            </ul>
+          </div>
+          <div class="panel" id=panel1-2>
+            <ul>
+              <li>
+                <p>기획전시</p>
+                <p>- 만화, #시대를 담다(1950~1999:삶의 풍경과 이야기</p>
+              </li>
+              <li>
+                <p>기획전시</p>
+                <p>탐묘인간: 고양이와 함께 산다는 것</p>
+              </li>
+              <li>
+                <p>교육</p>
+                <p>나만의 일상툰 만들기</p>
+              </li>
+            </ul>
+          </div>
+        </div>       
+      </div>
+      <div class="reserv_info">
+        <div class="info_1">
+          <p class="date">11.15(월)</p>
+          <p class="open">OPEN                         CLOSE</p>
+          <p class="time">10:00 ~ 18:00</p>
+        </div>
+        <div class="info_2">
+          <p><a href="#">오시는길</a></p>
+          <p><a href="#">예약하기</a></p>
+        </div>
+
+      </div>
+   </div>
+  </section>
+  <section id="section3">
+    <div class="inner2">
+      <div class="edu_program">
+        <div class="block block_1">
+          <div class="program_info">
+          <p class="title">만화가와 만나는 날:</p>
+          <p class="title">문지현 작가</p>
+          <p>진행기간 ㅣ 2021.11.15~2021.11.17</p>
+          <p>교육대상 ㅣ 모든시민</p>
+          </div>
+        </div>
+        <div class="block block_2">
+          <div class="title">
+          교육<br>프로그램
+          </div>
+        </div>
+        <div class="block block_3">
+        </div>
+        <div class="block block_4">
+          <div class="program_info">
+            <p class="title">나만의 만화<br>일상툰 만들기</p>
+            <p>진행기간 ㅣ 2021.10.25~2021.11.18</p>
+            <p>교육대상 ㅣ 초등학생,중학생</p>
+          </div>
+        </div>
+        <div class="block block_5">
+          <div class="program_info">
+            <p class="title">만화유산으로 만나는<br> 역사이야기</p>
+            <p>진행기간 ㅣ 2021.10.25~2021.11.18</p>
+            <p>교육대상 ㅣ 모든시민</p>
+          </div>
+        </div>
+    </div>
+  </section>
+  <div><img class="hat" src="images/hatperson.png" alt="모자쓴사람"></div>
+
+  <section id="section4">
+    <div class="inner">
+      <div class="contents">
+        <div class="block_1">
+          <div class="title">
+            <p><a href="#">공지사항</a></p>
+            <p><a href="#">채용공고</a></p>
+            <p><a href="#">더보기 ></a></p>
+          </div>
+          <div class="notice">
+            <p><a href="#">2021.11.08 ㅣ 한국만화박물관 카페테리아 사용,수익허가...</a></p>
+            <p><a>2021.11.02 ㅣ 위드 코로나(단계적 일상회복 1차 개편)...</a></p>
+            <p><a href="#">2021.11.01 ㅣ 만화도서관 운영방식 변경에 따른 이용...</a></p>
+            <p><a href="#">2021.10.25 ㅣ [이벤트]코로나19 백신 접종 박물관 행사...</a></p>
+          </div>
+        </div>
+        <div class="block_2">
+          <div class="title">만화웹진</div>
+          <ul class="article">
+            <li>
+              <p class="img"><img src="images/webzine_1.png" alt="웹진썸네일"></p>
+              <p><a href="#">네이버 웹툰은 왜 'AI 페인터'를 만들었을까?</a></p>
+            </li>
+            <li>
+              <p class="img"><img src="images/webzine_2.png" alt="웹진썸네일"></p>
+              <p><a href="#">[만화리뷰] <비오는 날에는 귀신이 나타난다> : 일상속에 잠들어 있던 불가사의와의 조우</a></p>          
+            </li>
+          </ul>     
+        </div>       
+        <div class="block_3"><a href="#"><img src="images/playicon.png" alt="재생버튼"></a></div>
+        <div class="block_4">
+          <p>만화도서관 소장자료 검색</p>
+          <div class=search>
+          <input type="text" placeholder="">
+          <button>검색</button>
+          </div>
+        </div>
+        <div class="block_5">
+          <ul>
+            <li><a href="#"><img src="images/icon_youtube.png" alt="유튜브바로가기"></a></li>
+            <li><a href="#"><img src="images/icon_blog.png" alt="블로그바로가기"></a></li>
+            <li><a href="#"><img src="images/icon_facebook.png" alt="페이스북바로가기"></a></li>
+            <li><a href="#"><img src="images/icon_insta.png" alt="인스타바로가기"></a></li>
+          </ul>
+          <div class="more_sites">
+            <p>관련사이트 바로가기</p>
+            <img src="images/down_arrow.png" alt="관련사이트">
+            <div>
+              <ul class="rel_lists">
+                <li><a href="#">한국만화영상진흥원</a></li>
+                <li><a href="#">만화규장각</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="block_6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2205.884186748107!2d126.74126349412707!3d37.50870138904917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b7d0bdbb1488b%3A0xb155ac02924b75c3!2z7ZWc6rWt66eM7ZmU67CV66y86rSA!5e0!3m2!1sko!2skr!4v1637816119875!5m2!1sko!2skr" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>     
+        </div>
+      </div>
+    </div> 
+  </section>
+
+  <footer id="footer">
+      <div class="sitemap">
+        <ul class="sitemaplists">
+          <li>박물관소개
+            <ul class="lists">
+              <li><a href="#">설립취지</a></li>
+              <li><a href="#">CI소개</a></li>
+              <li><a href="#">조직</a></li>
+              <li><a href="#">소식</a></li>
+            </ul>
+          </li>
+          <li>이용안내
+            <ul class="lists">
+              <li><a href="#">관람안내</a></li>
+              <li><a href="#">오시는길</a></li>
+              <li><a href="#">단체관람 예약</a></li>
+              <li><a href="#">시설안내</a></li>
+            </ul>
+          </li>
+          <li>전시
+            <ul class="lists">
+              <li><a href="#">상설전시</a></li>
+              <li><a href="#">기획전시</a></li>
+              <li><a href="#">온라인전시</a></li>
+            </ul>
+          </li>
+          <li>상영
+            <ul class="lists">
+              <li><a href="#">이용안내</a></li>
+              <li><a href="#">상영작안내</a></li>
+            </ul>
+          </li>
+          <li>교육
+            <ul class="lists">
+              <li><a href="#">교육안내</a></li>
+              <li><a href="#">상설체험교육</a></li>
+              <li><a href="#">만화상상아카데미</a></li>
+              <li><a href="#">갤러리</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <div class="last">
+        <ul class="last_1">
+          <li><a href="#">개인정보 처리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+        </ul>
+        <div><img src="images/logo_2.png" alt="한국만화박물관"></div>
+        <div class="address">경기도 부천시 길주로 1 우)14505 TEL 032-310-3090 ~ 3091</div>
+        <div class="rights">Copyright© 2013. 한국만화영상진흥원. All rights reserved.</div>
+      </div>
+  </footer>
+</div>
+
+</body>
+</html>
