@@ -73,13 +73,7 @@ $(document).ready(function() {//실행틀 시작
            $('#btn-close, #modal .img1').click(
                function(){ $('#modal').fadeOut();
                              img_big = ""
-          });
-
-          $('.blue_li').click(function(){
-            $(this).addClass('.blue_effect')
-
-
-
+               $('#modal .img1').attr('src',img_big);
           });
           
           $(window).scroll(function(){
