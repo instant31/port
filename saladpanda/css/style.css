@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap');
+@font-face {
+  font-family: "wando" ;
+  src: url(../fonts/WandocleanseaB.ttf);
+}
+@font-face {
+  font-family: "ns_extrabold" ;
+  src: url(../fonts/NanumSquare_0.ttf);
+}
+@font-face {
+  font-family: "ns_bold";
+  src: url(../fonts/NanumSquare.ttf);
+}
+@font-face {
+  font-family: "ns_regular" ;
+  src: url(../fonts/NanumSquare_acR.ttf);
+}
+
+* {margin:0;padding:0;}
+html {font-size:16px;}
+a {text-decoration:none;}
+body {font-size:16px;font-family:'Noto Sans KR', sans-serif;color:#303030;}
+h2 {font-size:2rem;}
+h3 {font-weight:300;}
+#wrap {background-color:rgb(255, 255, 255);width:100%;}
+.inner {width:100%;max-width:1200px;margin:0 auto;background-color:#afb6b1;}
+ul li {list-style:none;}
+
+#section1 {display:flex;flex-wrap:wrap;margin-bottom:180px;}
+#section1 h1 {width:100%;}
+#section1 h1 img {width:130px;}
+#section1 .text_box {background-color:#f8f9fb;width:50%;margin:auto 0;}
+#section1 .text_box .p1 {background-color:#f8f9fb;font-size:2rem;font-family:"ns_regular";padding:20px 0}
+#section1 .text_box .p2 {background-color:#f8f9fb;font-size:4rem;font-family:"wando"}
+#section1 .text_box .p3 {background-color:#f8f9fb;font-size:4rem;font-family:"wando";color:#98b10f}
+#section1 .text_box .p4 {padding:30px 0}
+.img_box {width:50%}
+.img_box img {width:100%;}
+
+
+#section2 {background-color:#f8f9fb;margin-bottom:200px;}
+#section2 .every {font-family:"wando";font-size:2rem;text-align:center;margin-bottom:75px;}
+#section2 .steps {display:flex;flex-wrap:nowrap;padding:0 100px;justify-content:space-between}
+.steps li {background-color:#f8f9fb;width:calc(100%/4 - 30px);text-align:center;padding:43px 0;box-shadow: 0px 0px 25px -2px rgba(125,125,125,0.38);}
+.step_numb {position:absolute;top:0;left:0;}
+.steps .st {font-size:1.34rem;font-family:"ns_bold"}
+.steps .numb {font-size:2.56rem;font-family:"ns_bold";transform:translateY(-6px);}
+
+.step1 {position:relative;border-radius:80px 20px 20px 20px;}
+.step1 .p1 {font-family:"ns_extrabold";font-size:1.75rem;color:#98b10f;padding:10px 0;}
+.step1 .p2 {font-family:"ns_bold";font-size:1.375rem;padding:5px 0}
+.step1 .p3 {font-family:"ns_bold";font-size:1.375rem;}
+
+.step2 {position:relative;border-radius:80px 20px 20px 20px;}
+.step2 .p1 {font-family:"ns_extrabold";font-size:1.75rem;color:#98b10f;padding:10px 0;}
+.step2 .p2 {font-family:"ns_bold";font-size:1.375rem;padding:5px 0}
+.step2 .p3 {font-family:"ns_bold";font-size:1.375rem;}
+
+.step3 {position:relative;border-radius:80px 20px 20px 20px;}
+.step3 .p1 {font-family:"ns_extrabold";font-size:1.75rem;color:#98b10f;padding:10px 0;}
+.step3 .p2 {font-family:"ns_bold";font-size:1.375rem;padding:5px 0}
+.step3 .p3 {font-family:"ns_bold";font-size:1.375rem;}
+
+.step4 {position:relative;border-radius:80px 20px 20px 20px;}
+.step4 .p1 {font-family:"ns_extrabold";font-size:1.75rem;color:#98b10f;padding:10px 0;}
+.step4 .p2 {font-family:"ns_bold";font-size:1.375rem;padding:5px 0}
+.step4 .p3 {font-family:"ns_bold";font-size:1.375rem;}
+/*section2 끝*/
+
+
+
+#section3 {background-color:#f8f9fb;margin-bottom:200px;text-align:center;}
+#section3 .twoweeks {font-family:"ns_bold";font-size:2rem;margin-bottom:10px;}
+#section3 .oneday {font-family:"ns_extrabold";font-size:2.62rem;margin-bottom:80px;}
+#section3 .cont {display:flex;flex-wrap:wrap;padding:0 100px;}
+#section3 .img_box {width:60%}
+#section3 .text_box {width:40%;font-family:"ns_bold"}
+#section3 .text_box .p1 {font-family:"wando";font-size:2rem;;color:#fff;padding:20px 0;border-radius:0 40px 40px 0;/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c3d86c+1,97b10f+100 */
+  background: #c3d86c; /* Old browsers */
+  background: -moz-linear-gradient(left,  #c3d86c 1%, #97b10f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #c3d86c 1%,#97b10f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #c3d86c 1%,#97b10f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d86c', endColorstr='#97b10f',GradientType=1 ); /* IE6-9 */
+  
+  }
+#section3 .text_box .p2 {font-size:1.38rem;padding:23px 0;}
+.p2 .extra {font-family:"ns_extrabold"}
+#section3 .text_box .p3 {font-size:1.38rem;font-family:"ns_extrabold";margin-bottom:5px;}
+#section3 .text_box .p4 {font-size:1.05rem;font-family:"ns_bold"}
+#section3 .calender {margin-bottom:20px;width:85%}
+
+
+
+#section4 {background-color:#f8f9fb;margin-bottom:200px;text-align:center;}
+#section4 .want {font-family:"ns_bold";font-size:2rem;margin-bottom:10px;}
+#section4 .salad {font-family:"ns_extrabold";font-size:2.62rem;margin-bottom:160px;}
+
+#section5 {background-color:blue;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* #li {width:calc((100% - 40px)/3)}
+#li_big {width:calc((100% - 40px)/3*2 + 20px);}
+img {width: 100% 여기서 이미지의 세로가 li 밖으로 튀어나오면 li에게 height와 overflow:hidden을 준다} */
+
