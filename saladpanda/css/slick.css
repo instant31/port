@@ -119,5 +119,14 @@
 }
 
 
-.item {background-color:red;}
-.item {height:300px;}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    width:calc(100% - 140px);
+}
+
+/* slick슬라이드 디자인 수정하고 싶으면 일단 크롬 개발자도구에서 해당영역 class알아낸 이후에 클래스 이름 복사>>slick.css에서 디자인 수정한다 위의 .slick-list도 그렇게 복사해온것. 클래스 이름말고도 position~width값까지 전부 복사해 온것. 갖고 와서 margin값 수정했음 */

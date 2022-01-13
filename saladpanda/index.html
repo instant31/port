@@ -14,6 +14,7 @@
 <link rel="stylesheet" type="text/css" href="./css/slick.css">
 
 
+
 <script src="./js/jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/jquery-migrate-3.0.0.js"></script> 
 <script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
@@ -25,7 +26,11 @@ $(document).ready(function() {
   slidesToShow: 2,
   slidesToScroll: 2
 });
-  $.aniPage=function(e,type){
+
+});//실행틀 끝
+
+(function($){
+		$.aniPage=function(e,type){
 			if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0){
 				$("body, html").animate({
 					scrollTop:$(window).scrollTop()-$(window).height()
@@ -51,11 +56,8 @@ $(document).ready(function() {
 		if($.aniOk == 0){
 			$.aniPage(e,e.type);
 			$.aniOk = 1;
-		};
-  
-
-
-});//실행틀 끝
+		}
+	});
 </script>
 
 <body>
@@ -142,19 +144,48 @@ $(document).ready(function() {
         <p class="want">원하는 제품을 골라보세요!</p>
         <p class="salad">샐러드판다 라인업</p>
           <div class="multiple-items">
-            <div class="item">보틀샐러드 12종</div>
-            <div class="item">세끼판다샐러드 5종</div>
-            <div class="item">샐러드랩 4종</div>
-            <div class="item">브리또볼 3종</div>
-            <div class="item">누들샐러드 3종</div>
-            <div class="item">두부면샐러드 3종</div>
+            <div class="item">
+              <div class="salad_box">
+                <img src="images/section4_bottlesalad.png">
+                <p class="salad_name">보틀샐러드 12종</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="salad_box">
+                <img src="images/section4_babypandasalad.png">
+                <p class="salad_name">세끼판다샐러드 5종</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="salad_box">
+                <img src="images/section4_saladwrap.png">
+                <p class="salad_name">샐러드랩 4종</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="salad_box">
+                <img src="images/section4_burittobowl.png">
+                <p class="salad_name">부리또볼 3종</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="salad_box">
+                <img src="images/section4_noodlesalad.png">
+                <p class="salad_name">누들샐러드 3종</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="salad_box">
+                <img src="images/section4_tofusalad.png">
+                <p class="salad_name">두부면샐러드 3종</p>
+              </div>
+            </div>
 
           </div>
       </section>
 
       <section id="section5">
-        샐러드판다와 함께 건강한 하루 시작하기
-
+       <img src="images/section5_form.png">
       </section>
 
     </div>
